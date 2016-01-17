@@ -1,0 +1,6 @@
+Make sure all functions that return a status are checked for that status
+Make sure all memory, transfer, buffer, etc allocations are handled properly
+Too many comm failures, disabled for now.
+Double check ram/flash allocation names in the pragma
+Find out where the discover neighbors rate is modified and keep it going fast until the neighbors have been reported and/or add a check to see if neighbors have an address before reporting
+Measure the transmission time and set all timeouts accordingly

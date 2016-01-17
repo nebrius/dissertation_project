@@ -1,0 +1,276 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="D:\Documents and Settings\Bryan\My Documents\Research\Dissertation\Interconnect Firmware\"
+ProjectType=Executable
+CPUFamily=TMS320C28XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="router_interconnect.tcf"
+Source="src_common\Hardware_CodeStartBranch.asm"
+Source="src_common\Hardware_F2808Registers.c"
+Source="src_common\Hardware_F2808Registers.h"
+Source="src_common\Hardware_Interrupts.c"
+Source="src_common\Hardware_SevenSegment.c"
+Source="src_common\Hardware_SevenSegment.h"
+Source="src_common\Hardware_Spi.c"
+Source="src_common\Hardware_Spi.h"
+Source="src_common\mpi.h"
+Source="src_common\Mpi_Frontend.c"
+Source="src_common\Processing_DirectTransfer.c"
+Source="src_common\Processing_DirectTransfer.h"
+Source="src_common\Processing_Que.c"
+Source="src_common\Processing_Que.h"
+Source="src_common\Processing_TransmitPacket.c"
+Source="src_common\Processing_TransmitPacket.h"
+Source="src_common\Protocol_Actions.c"
+Source="src_common\Protocol_Actions.h"
+Source="src_common\Protocol_CommandCommFailure.c"
+Source="src_common\Protocol_CommandCommFailure.h"
+Source="src_common\Protocol_CommandDataTransfer.c"
+Source="src_common\Protocol_CommandDataTransfer.h"
+Source="src_common\Protocol_CommandDiscoverNeighbors.c"
+Source="src_common\Protocol_CommandDiscoverNeighbors.h"
+Source="src_common\Protocol_CommandMPIControl.c"
+Source="src_common\Protocol_CommandMPIControl.h"
+Source="src_common\Protocol_CommandNewRoutingTableAvailable.c"
+Source="src_common\Protocol_CommandNewRoutingTableAvailable.h"
+Source="src_common\Protocol_CommandReportNeighbors.c"
+Source="src_common\Protocol_CommandReportNeighbors.h"
+Source="src_common\Protocol_CommandRequestAddress.c"
+Source="src_common\Protocol_CommandRequestAddress.h"
+Source="src_common\Protocol_CommandRequestRoutingTable.c"
+Source="src_common\Protocol_CommandRequestRoutingTable.h"
+Source="src_common\Protocol_PacketHandeling.c"
+Source="src_common\Protocol_PacketHandeling.h"
+Source="src_common\Protocol_Routing.c"
+Source="src_common\Protocol_Routing.h"
+Source="src_common\Service_Registration.c"
+Source="src_common\Service_Registration.h"
+Source="src_common\Service_TestService.c"
+Source="src_common\Service_TestService.h"
+Source="src_common\System.h"
+Source="src_common\System_FollowUpMonitor.c"
+Source="src_common\System_FollowUpMonitor.h"
+Source="src_common\System_Globals.c"
+Source="src_common\System_Globals.h"
+Source="src_common\System_MemoryManager.c"
+Source="src_common\System_MemoryManager.h"
+Source="src_common\System_Preferences.h"
+Source="src_common\System_Startup.c"
+Source="src_common\System_Symbols.h"
+Source="src_common\System_Utilities.c"
+Source="src_common\System_Utilities.h"
+Source="src_router\NodeType.h"
+Source="todo.txt"
+Source="f2808_registers.cmd"
+Source="router_interconnectcfg.cmd"
+
+[Generated Files]
+Source="router_interconnectcfg.s28"
+Source="router_interconnectcfg_c.c"
+
+["Compiler" Settings: "Debug"]
+Options=-g -pdsw225 -fr"$(Proj_dir)\Debug\router" -i"$(Proj_dir)\" -i"$(Proj_dir)\src_common" -i"$(Proj_dir)\src_f2808" -i"$(Proj_dir)\src_router" -d"_DEBUG" -d"LARGE_MODEL" -ml -v28
+
+["Compiler" Settings: "Release"]
+Options=-pdsw225 -o3 -fr"$(Proj_dir)\Release" -d"LARGE_MODEL" -ml -v28
+
+["Linker" Settings: "Debug"]
+Options=-c -m".\Debug\router\router.map" -o".\Debug\router\router.out" -w -x
+
+["Linker" Settings: "Release"]
+Options=-c -m".\Release\router.map" -o".\Release\router.out" -w -x
+
+["src_common\Hardware_F2808Registers.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Hardware_F2808Registers.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Hardware_SevenSegment.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Hardware_SevenSegment.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Hardware_Spi.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Hardware_Spi.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\mpi.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\mpi.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Processing_DirectTransfer.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Processing_DirectTransfer.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Processing_Que.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Processing_Que.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Processing_TransmitPacket.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Processing_TransmitPacket.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_Actions.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_Actions.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandCommFailure.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandCommFailure.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandDataTransfer.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandDataTransfer.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandDiscoverNeighbors.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandDiscoverNeighbors.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandMPIControl.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandMPIControl.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandNewRoutingTableAvailable.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandNewRoutingTableAvailable.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandReportNeighbors.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandReportNeighbors.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandRequestAddress.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandRequestAddress.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandRequestRoutingTable.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_CommandRequestRoutingTable.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_PacketHandeling.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_PacketHandeling.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_Routing.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Protocol_Routing.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Service_Registration.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Service_Registration.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\Service_TestService.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\Service_TestService.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\System.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\System.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\System_FollowUpMonitor.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\System_FollowUpMonitor.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\System_Globals.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\System_Globals.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\System_MemoryManager.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\System_MemoryManager.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\System_Preferences.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\System_Preferences.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\System_Symbols.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\System_Symbols.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_common\System_Utilities.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_common\System_Utilities.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["src_router\NodeType.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["src_router\NodeType.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["todo.txt" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["todo.txt" Settings: "Release"]
+ExcludeFromBuild=true
+
+["f2808_registers.cmd" Settings: "Debug"]
+LinkOrder=1
+
+["f2808_registers.cmd" Settings: "Release"]
+LinkOrder=1
+
+["router_interconnectcfg.cmd" Settings: "Debug"]
+LinkOrder=2
+
+["router_interconnectcfg.cmd" Settings: "Release"]
+LinkOrder=1
+
